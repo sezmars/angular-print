@@ -1,0 +1,102 @@
+/**
+* Change the size of titles for your pos terminal
+*/
+
+table {
+  table-layout: fixed;
+}
+
+.invoice-POS {
+  box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+  padding: 2mm;
+  margin: 0 auto;
+  width: 44mm;
+  background: #FFF;
+
+  ::selection {
+    background: #f31544;
+    color: #FFF;
+  }
+
+  ::moz-selection {
+    background: #f31544;
+    color: #FFF;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    color: #222;
+  }
+
+  h2 {
+    font-size: .9em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 2em;
+  }
+
+  p {
+    font-size: .7em;
+    color: #666;
+    line-height: 1.2em;
+  }
+
+  #top {
+    min-height: 100px;
+  }
+
+  #mid {
+    min-height: 80px;
+  }
+
+  #bot {
+    min-height: 50px;
+  }
+
+  .info {
+    display: block;
+    margin-left: 0;
+  }
+
+  .title {
+    float: right;
+  }
+
+  .title p {
+    text-align: right;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  #legal-copy {
+    margin-top: 5mm;
+  }
+
+  .table-title {
+    font-size: .5em;
+    background: #EEE;
+  }
+
+  #top, .invoice-POS #mid, .invoice-POS #bot {
+    border-bottom: 1px solid #EEE;
+  }
+
+  .service {
+    border-bottom: 1px solid #EEE;
+  }
+
+  .item {
+    width: 11mm;
+  }
+
+  .item-text {
+    font-size: .5em;
+    word-wrap: break-all;
+  }
+}

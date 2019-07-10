@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+
+  .table-responsive {
+    display: grid;
+  }
+
+  tr:nth-child(even) {
+    background-color: #2e2649;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #423b5b;
+  }
+
+  th {
+    background-color: #342F44;
+    color: white;
+  }
+
+  td {
+    color: white;
+  }
+}
+
+.canvas {
+  text-align: center
+}
+
+canvas {
+  transition: 300ms;
+  border-radius: 4px;
+  border: 3px solid rgba(0,0,0,0.12);
+  &:hover {
+    border: 3px solid rgba(0,0,0,0.54);
+  }
+}

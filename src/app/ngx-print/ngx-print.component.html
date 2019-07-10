@@ -1,0 +1,105 @@
+<!-- [printStyle] are used for printing -->
+
+<button mat-button
+        class="print"
+        color="primary"
+        printSectionId="invoice-POS"
+        [printStyle]="{
+         h2 : { 'font-size': '1em'},
+         p : { 'word-wrap': 'break-all'},
+         table : { 'table-layout': 'fixed'},
+         section : { 'border-bottom': '1px solid black'}}"
+        ngxPrint>Print with ngx-print
+</button>
+
+<div class="invoice-POS">
+  <div class="logo"></div>
+  <div class="info">
+    <h2>SBISTechs Inc</h2>
+  </div>
+  <!--End Info-->
+
+  <div id="mid">
+    <div class="info">
+      <h2>Contact Info</h2>
+      <p>
+        Address : street city, state 000 <br>
+        Email : JohnDoe@gmail.com <br>
+        Phone : 555-555-5555 <br>
+      </p>
+    </div>
+  </div>
+  <!--End Invoice Mid-->
+
+  <div id="bot">
+    <div id="table">
+      <table>
+        <tr class="table-title">
+          <td>
+            <h2>
+              Items
+            </h2>
+          </td>
+          <td class="Hours"><h2>Qty</h2></td>
+          <td class="Rate"><h2>Sub Total</h2></td>
+        </tr>
+
+        <tr class="service">
+          <td class="table-item"><p class="item-text">
+            Digital Phone
+          </p>
+          </td>
+          <td class="table-item"><p class="item-text">5</p></td>
+          <td class="table-item"><p class="item-text">$375.00</p></td>
+        </tr>
+
+        <tr class="service">
+          <td class="table-item"><p class="item-text">Notebook</p></td>
+          <td class="table-item"><p class="item-text">3</p></td>
+          <td class="table-item"><p class="item-text">$225.00</p></td>
+        </tr>
+
+        <tr class="service">
+          <td class="table-item"><p class="item-text">Book</p></td>
+          <td class="table-item"><p class="item-text">5</p></td>
+          <td class="table-item"><p class="item-text">$375.00</p></td>
+        </tr>
+        <tr class="service">
+          <td class="table-item"><p class="item-text">Powerbank</p></td>
+          <td class="table-item"><p class="item-text">20</p></td>
+          <td class="table-item"><p class="item-text">$1500.00</p></td>
+        </tr>
+        <tr class="service">
+          <td class="table-item"><p class="item-text">Glasses</p></td>
+          <td class="table-item"><p class="item-text">10</p></td>
+          <td class="table-item"><p class="item-text">$750.00</p></td>
+        </tr>
+
+
+        <tr class="table-title">
+          <td></td>
+          <td class="Rate"><h2>TAX</h2></td>
+          <td class="payment"><h2>$419.25</h2></td>
+        </tr>
+
+        <tr class="table-title">
+          <td></td>
+          <td class="Rate"><h2>Total</h2></td>
+          <td class="payment"><h2>$3,644.25</h2></td>
+        </tr>
+
+      </table>
+    </div>
+    <!--End Table-->
+
+    <div id="legal-copy">
+      <p class="legal"><strong>Thank you for your business!</strong>
+        Payment is expected within 31 days; please process this invoice within that time. There will be a 5% interest
+        charge per month on late invoices.
+      </p>
+    </div>
+
+  </div>
+  <!--End InvoiceBot-->
+</div>
+<!--End Invoice-->
