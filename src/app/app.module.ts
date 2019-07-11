@@ -7,7 +7,7 @@ import {AppRoutingModule} from './app.routing.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {Html2canvasPrintJsComponent} from './html2canvas-print-js';
 import {NgxPrintComponent} from './ngx-print/ngx-print.component';
-import {MatButtonModule, MatRadioModule, MatTableModule} from '@angular/material';
+import {MatButtonModule, MatRadioModule, MatTableModule, MatTabsModule, MatTooltipModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -18,11 +18,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   ],
   imports: [
     FormsModule,
+    MatTabsModule,
     BrowserModule,
     NgxPrintModule,
     MatTableModule,
     MatRadioModule,
     MatButtonModule,
+    MatTooltipModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],

@@ -1,14 +1,17 @@
 <!-- [printStyle] are used for printing -->
 
 <button mat-button
-        class="print"
         color="primary"
-        printSectionId="invoice-POS"
         [printStyle]="{
-         h2 : { 'font-size': '1em'},
-         p : { 'word-wrap': 'break-all'},
-         table : { 'table-layout': 'fixed'},
-         section : { 'border-bottom': '1px solid black'}}"
+        h2 : { 'font-size': '1em'},
+        p : { 'word-wrap': 'break-all'},
+        table : { 'table-layout': 'fixed'},
+        section : { 'border-bottom': '1px solid black'}}"
+        printSectionId="invoice-POS"
+        [matTooltipPosition]="'right'"
+        matTooltip="Designed for printing
+        receipts. Print size should be 44mm,
+        can be changed in ngx-print.component.scss"
         ngxPrint>Print with ngx-print
 </button>
 

@@ -7,16 +7,12 @@ import {NgxPrintComponent} from './ngx-print/ngx-print.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '',
     pathMatch: 'full',
+    redirectTo: 'ngxPrint',
   },
   {
     path: '',
     component: AppComponent,
-    children: [
-
-
-    ]
   },
   {
     path: 'html2canvasPrintJs',

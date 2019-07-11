@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { Html2canvasPrintJsComponent } from './html2canvas-print-js.component';
+import {Html2canvasPrintJsComponent} from './html2canvas-print-js.component';
 
 describe('Html2canvasPrintJsComponent', () => {
   let component: Html2canvasPrintJsComponent;
@@ -8,9 +8,9 @@ describe('Html2canvasPrintJsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Html2canvasPrintJsComponent ]
+      declarations: [Html2canvasPrintJsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,5 +1,5 @@
 /**
-* Change the size of titles for your pos terminal
+* Change the size of titles {tag h} for your pos terminal
 */
 
 table {
@@ -7,25 +7,25 @@ table {
 }
 
 .invoice-POS {
-  box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+  width: 44mm;
   padding: 2mm;
   margin: 0 auto;
-  width: 44mm;
   background: #FFF;
+  box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
 
   ::selection {
-    background: #f31544;
     color: #FFF;
+    background: #f31544;
   }
 
   ::moz-selection {
-    background: #f31544;
     color: #FFF;
+    background: #f31544;
   }
 
   h1 {
-    font-size: 1.5em;
     color: #222;
+    font-size: 1.5em;
   }
 
   h2 {
@@ -39,8 +39,8 @@ table {
   }
 
   p {
-    font-size: .7em;
     color: #666;
+    font-size: .7em;
     line-height: 1.2em;
   }
 

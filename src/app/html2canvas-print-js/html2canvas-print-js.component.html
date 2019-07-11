@@ -9,10 +9,11 @@
   </mat-radio-group>
 </section>
 <button
-  class="print"
   (click)="printTable()"
+  [matTooltipPosition]="'right'"
   [@animationOptionTable]="ifTable"
-  *ngIf="ifTable" mat-button color="accent">
+  *ngIf="ifTable" mat-button color="primary"
+  matTooltip="Designed to print content html pages with styles">
   Print Table with html2canvas and print-js
 </button>
 
@@ -51,9 +52,10 @@
   </table>
 </div>
 
-<button class="print"
+<button [matTooltipPosition]="'right'"
         [@animationOptionCanvas]="ifCanvas"
-        *ngIf="ifCanvas" mat-button color="accent"
+        *ngIf="ifCanvas" mat-button color="primary"
+        matTooltip="Designed for printing canvas with styles"
         (click)="printCanvas()">Print Canvas with html2canvas and print-js
 </button>
 
