@@ -1,6 +1,9 @@
+import {FormsModule} from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {Html2canvasPrintJsComponent} from './html2canvas-print-js.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatRadioModule, MatTableModule, MatTooltipModule} from '@angular/material';
 
 describe('Html2canvasPrintJsComponent', () => {
   let component: Html2canvasPrintJsComponent;
@@ -8,7 +11,16 @@ describe('Html2canvasPrintJsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [Html2canvasPrintJsComponent]
+      imports: [
+        FormsModule,
+        BrowserModule,
+        MatTableModule,
+        MatRadioModule,
+        MatButtonModule,
+        MatTooltipModule,
+        BrowserAnimationsModule,
+      ],
+      declarations: [Html2canvasPrintJsComponent],
     })
       .compileComponents();
   }));

@@ -4,8 +4,7 @@ import html2canvas from 'html2canvas';
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {animate, style, transition, trigger} from '@angular/animations';
 
-
-export interface PeriodicElement {
+export interface IPeriodicElement {
   name: string;
   weight: number;
   symbol: string;
@@ -15,7 +14,7 @@ export interface PeriodicElement {
 /**
  * Mock data for the table
  */
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: IPeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
   {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
@@ -28,7 +27,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
 ];
 
-
 @Component({
   selector: 'app-html2canvas-print-js',
   templateUrl: './html2canvas-print-js.component.html',
@@ -37,27 +35,28 @@ const ELEMENT_DATA: PeriodicElement[] = [
     trigger('animationOptionTable', [
         transition(':enter', [
           style({transform: 'translateX(100%)', opacity: 0}),
-          animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
+          animate('500ms', style({transform: 'translateX(0)', opacity: 1})),
         ]),
         transition(':leave', [
           style({transform: 'translateX(0)', opacity: 1}),
-          animate('500ms', style({transform: 'translateX(100%)', opacity: 0}))
-        ])
+          animate('500ms', style({transform: 'translateX(100%)', opacity: 0})),
+        ]),
       ],
     ),
     trigger('animationOptionCanvas', [
         transition(':enter', [
           style({transform: 'translateX(100%)', opacity: 0}),
-          animate('500ms', style({transform: 'translateX(0)', opacity: 1}))
+          animate('500ms', style({transform: 'translateX(0)', opacity: 1})),
         ]),
         transition(':leave', [
           style({transform: 'translateX(0)', opacity: 1}),
-          animate('500ms', style({transform: 'translateX(100%)', opacity: 0}))
-        ])
+          animate('500ms', style({transform: 'translateX(100%)', opacity: 0})),
+        ]),
       ],
     ),
-  ]
+  ],
 })
+
 export class Html2canvasPrintJsComponent {
   public canvas: ElementRef;
   public ifTable: boolean = false;
@@ -76,19 +75,6 @@ export class Html2canvasPrintJsComponent {
         this.draw();
       }
     }
-  }
-
-  /**
-   * Draw canvas
-   */
-  private draw() {
-    this.context.font = '30px Arial';
-    this.context.textAlign = 'center';
-    this.context.textBaseline = 'middle';
-
-    const x = (this.canvas.nativeElement as HTMLCanvasElement).width / 2;
-    const y = (this.canvas.nativeElement as HTMLCanvasElement).height / 2;
-    this.context.fillText('@sezmars', x, y);
   }
 
   public printTable() {
@@ -112,7 +98,6 @@ export class Html2canvasPrintJsComponent {
     });
   }
 
-
   public printCanvas() {
 
     /**
@@ -133,5 +118,17 @@ export class Html2canvasPrintJsComponent {
       printJS({printable: `${toImg}`, type: 'image', imageStyle: 'width:30%'});
     });
   }
-}
 
+  /**
+   * Draw canvas
+   */
+  private draw() {
+    this.context.font = '30px Arial';
+    this.context.textAlign = 'center';
+    this.context.textBaseline = 'middle';
+
+    const x = (this.canvas.nativeElement as HTMLCanvasElement).width / 2;
+    const y = (this.canvas.nativeElement as HTMLCanvasElement).height / 2;
+    this.context.fillText('@sezmars', x, y);
+  }
+}

@@ -5,10 +5,10 @@ import {AppComponent} from './app.component';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app.routing.module';
 import {BrowserModule} from '@angular/platform-browser';
-import {Html2canvasPrintJsComponent} from './html2canvas-print-js';
 import {NgxPrintComponent} from './ngx-print/ngx-print.component';
-import {MatButtonModule, MatRadioModule, MatTableModule, MatTabsModule, MatTooltipModule} from '@angular/material';
+import {Html2canvasPrintJsComponent} from './html2canvas-print-js';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatRadioModule, MatTableModule, MatTabsModule, MatTooltipModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -29,6 +29,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
   ],
   exports: [RouterModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

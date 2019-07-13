@@ -1,6 +1,10 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-
+import {NgxPrintModule} from 'ngx-print';
+import {FormsModule} from '@angular/forms';
 import {NgxPrintComponent} from './ngx-print.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatRadioModule, MatTableModule, MatTooltipModule} from '@angular/material';
 
 describe('NgxPrintComponent', () => {
   let component: NgxPrintComponent;
@@ -8,7 +12,17 @@ describe('NgxPrintComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NgxPrintComponent]
+      imports: [
+        FormsModule,
+        BrowserModule,
+        MatTableModule,
+        MatRadioModule,
+        NgxPrintModule,
+        MatButtonModule,
+        MatTooltipModule,
+        BrowserAnimationsModule,
+      ],
+      declarations: [NgxPrintComponent],
     })
       .compileComponents();
   }));
