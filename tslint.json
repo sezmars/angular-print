@@ -1,10 +1,42 @@
 {
   "extends": "tslint:recommended",
   "rules": {
-    "max-line-length": [true, 140],
-    "no-console": [true, "debug", "info", "time", "timeEnd", "trace", "log"],
+    "max-line-length": [
+      true,
+      140
+    ],
+    "align": {
+      "options": [
+        "parameters",
+        "statements"
+      ]
+    },
+    "arrow-return-shorthand": true,
+    "no-console": [
+      true,
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace",
+      "log"
+    ],
+    "curly": true,
+    "deprecation": {
+      "severity": "warning"
+    },
+    "eofline": true,
     "quotemark": [false, "single"],
-    "semicolon": [true, "always"],
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "import-spacing": true,
+    "indent": {
+      "options": [
+        "spaces"
+      ]
+    },
     "extends": ["tslint:latest", "tslint-config-prettier"],
     "forin": true,
     "no-empty": false,
@@ -18,7 +50,44 @@
     "only-arrow-functions": false,
     "use-life-cycle-interface": true,
     "object-literal-sort-keys": false,
+    "space-before-function-paren": {
+      "options": {
+        "anonymous": "never",
+        "asyncArrow": "always",
+        "constructor": "never",
+        "method": "never",
+        "named": "never"
+      }
+    },
+    "typedef-whitespace": {
+      "options": [
+        {
+          "call-signature": "nospace",
+          "index-signature": "nospace",
+          "parameter": "nospace",
+          "property-declaration": "nospace",
+          "variable-declaration": "nospace"
+        },
+        {
+          "call-signature": "onespace",
+          "index-signature": "onespace",
+          "parameter": "onespace",
+          "property-declaration": "onespace",
+          "variable-declaration": "onespace"
+        }
+      ]
+    },
     "object-literal-key-quotes": false,
-    "adjacent-overload-signatures": false
+    "adjacent-overload-signatures": false,
+    "whitespace": {
+      "options": [
+        "check-branch",
+        "check-decl",
+        "check-operator",
+        "check-separator",
+        "check-type",
+        "check-typecast"
+      ]
+    }
   }
 }

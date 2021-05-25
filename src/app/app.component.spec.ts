@@ -1,7 +1,7 @@
 import {NgxPrintModule} from 'ngx-print';
 import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
-import {async, TestBed} from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import {AppRoutingModule} from './app.routing.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgxPrintComponent} from './ngx-print/ngx-print.component';
@@ -10,7 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatRadioModule, MatTableModule, MatTabsModule, MatTooltipModule} from '@angular/material';
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,

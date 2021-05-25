@@ -2,7 +2,7 @@ import {NgxPrintModule} from 'ngx-print';
 import {FormsModule} from '@angular/forms';
 import {NgxPrintComponent} from './ngx-print.component';
 import {BrowserModule} from '@angular/platform-browser';
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatRadioModule, MatTableModule, MatTooltipModule} from '@angular/material';
 
@@ -10,7 +10,7 @@ describe('NgxPrintComponent', () => {
   let component: NgxPrintComponent;
   let fixture: ComponentFixture<NgxPrintComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
