@@ -21,7 +21,7 @@
     "@angular/platform-browser": "~11.2.14",
     "@angular/platform-browser-dynamic": "~11.2.14",
     "@angular/router": "~11.2.14",
-    "angular-cli-ghpages": "^0.5.3",
+    "angular-cli-ghpages": "^1.0.0-rc.1",
     "core-js": "^2.5.4",
     "html2canvas": "^1.0.0-rc.3",
     "ngx-print": "^1.2.1",
